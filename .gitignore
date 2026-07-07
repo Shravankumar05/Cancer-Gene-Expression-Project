@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ===== Project-specific =====
+
+# Raw data (large, downloaded at runtime via ucimlrepo)
+data/raw/
+
+# Model artifacts (can be regenerated)
+*.pkl
+*.joblib
+
+# OS files
+.DS_Store
+Thumbs.db
