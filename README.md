@@ -39,6 +39,38 @@ To derive that link of high correlation between the gene and cancer class is imp
 | **Features** | 20,531 gene expression levels |
 | **Target** | 5 cancer types: BRCA, KIRC, COAD, LUAD, PRAD |
 
+## Project Structure
+
+```
+Cancer-Gene-Expression-Project/
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_preprocessing.ipynb
+│   ├── 03_feature_selection.ipynb
+│   ├── 04_model_training.ipynb
+│   ├── 05_evaluation.ipynb
+│   └── 06_interpretation.ipynb
+├── data/raw/
+├── outputs/
+│   ├── figures/
+│   └── tables/
+├── docs/
+├── report/
+├── requirements.txt
+└── README.md
+```
+
+## Pipeline
+
+| No. | Notebook | Goal | Output |
+|---|---|---|---|
+| 1 | `01_eda.ipynb` | Understand the data | Class distribution plot, expression distributions, TF gene list |
+| 2 | `02_preprocessing.ipynb` | Clean & transform | Log1p-transformed, scaled, stratified train/test split |
+| 3 | `03_feature_selection.ipynb` | Reduce 20K → ~500 features | Variance thresholding + mutual information, PCA plot |
+| 4 | `04_model_training.ipynb` | Build & tune classifier | Tuned Random Forest via GridSearchCV |
+| 5 | `05_evaluation.ipynb` | Measure performance | Confusion matrix, ROC curves, per-class F1 |
+| 6 | `06_interpretation.ipynb` | Find the important genes | SHAP beeswarm, permutation importance, TF validation table |
+
 ## Setup
 
 ```bash
