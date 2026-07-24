@@ -219,10 +219,8 @@ __marimo__/
 
 # ===== Project-specific =====
 
-# Raw data (large, downloaded at runtime via ucimlrepo)
 data/raw/
-
-# Model artifacts (can be regenerated)
+data/processed/
 *.pkl
 *.joblib
 
